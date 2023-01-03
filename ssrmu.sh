@@ -1232,7 +1232,7 @@ Modify_Config(){
 	fi
 }
 List_port_user(){
-	user_info=$(python mujson_mgr.py -l)
+	user_info=$(python3 mujson_mgr.py -l)
 	user_total=$(echo "${user_info}"|wc -l)
 	[[ -z ${user_info} ]] && echo -e "${Error} 没有发现 用户，请检查 !" && exit 1
 	user_list_all=""
